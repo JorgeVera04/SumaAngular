@@ -1,0 +1,18 @@
+<div class="box-container">
+  <h2>Proyecto: Sumar</h2>
+  
+  <div class="group">
+    <label>Número A:</label>
+    <input type="number" [(ngModel)]="num1" (input)="onInput()">
+  </div>
+
+  <div class="group">
+    <label>Número B:</label>
+    <input type="number" [(ngModel)]="num2" (input)="onInput()">
+  </div>
+
+  <div *ngIf="resultado !== null" class="box-resultado">
+    <p>La suma es:</p>
+    <h3>{{ resultado }}</h3>
+  </div>
+</div>

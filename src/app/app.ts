@@ -1,11 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { SumarComponent } from './components/sumar/sumar.component'; // <-- Importamos tu componente
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true,
+  imports: [SumarComponent], // <-- Lo agregamos aquí
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('MiniSuma');
+  // Dejamos la clase limpia, ya no necesitamos el signal del título
 }
